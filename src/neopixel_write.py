@@ -11,7 +11,7 @@ import sys
 
 from adafruit_blinka.agnostic import detector
 
-if detector.board.any_raspberry_pi:
+if detector.board.any_raspberry_pi or detector.board.any_raspberry_pi_40_pin:
     from adafruit_blinka.microcontroller.bcm283x import neopixel as _neopixel
 elif "sphinx" in sys.modules:
     pass
